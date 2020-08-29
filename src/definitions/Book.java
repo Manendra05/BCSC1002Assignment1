@@ -11,6 +11,14 @@ public class Book {
     private String authorName;
     private String bookISBNNumber;
 
+    public Book() {
+        this.bookName = "let us c";
+        this.authorName = "Yashavant P Kanetkar";
+        this.bookISBNNumber = "978-8176566216";
+    }
+
+}
+
 
 }
 
