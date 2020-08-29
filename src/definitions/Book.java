@@ -56,5 +56,25 @@ Now creat setter method for variables
         this.bookISBNNumber = bookISBNNumber;
     }
 
-}
+    public String toString() {
+        return "Name of the book is : " + " " + this.bookName + " , "
+                + "Name of the Author is : " + " " + getAuthorName() + " , "
+                + "ISBN number of the book is : " + " " + this.bookISBNNumber + " .";
+
+    }
+
+    public void doCheckout() {
+        System.out.println("Thank you for taking this book!");
+    }
+
+    public void doReturn() {
+        System.out.println("Thank you for giving back this book.");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+
 
