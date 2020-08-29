@@ -40,6 +40,21 @@ public class Book {
         return bookISBNNumber;
     }
 
+/*
+Now creat setter method for variables
+ */
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public void setBookISBNNumber(String bookISBNNumber) {
+        this.bookISBNNumber = bookISBNNumber;
+    }
 
 }
 
