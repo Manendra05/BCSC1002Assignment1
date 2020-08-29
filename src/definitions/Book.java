@@ -6,6 +6,8 @@
  **/
 package definitions;
 
+import java.util.Objects;
+
 public class Book {
     private String bookName;
     private String authorName;
@@ -76,5 +78,19 @@ Now creat setter method for variables
         if (this == o) return true;
         if (!(o instanceof Book)) return false;
         Book book = (Book) o;
+
+        return Objects.equals(getBookName(), book.getBookName()) &&
+                Objects.equals(getAuthorName(), book.getAuthorName()) &&
+                Objects.equals(getAuthorName(), book.getAuthorName()) &&
+                Objects.equals(getBookISBNNumber(), book.getBookISBNNumber());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBookName(), getAuthorName(), getBookISBNNumber());
+
+    }
+}
+
 
 
