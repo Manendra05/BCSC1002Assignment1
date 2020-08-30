@@ -48,6 +48,10 @@ public class Library {
         System.out.println(bookName + " is issued successfully .");
     }
 
+    public void returnedBook(String bookName) {
+        System.out.println(bookName + " is returned successfully . ");
+    }
+
 
 }
 
