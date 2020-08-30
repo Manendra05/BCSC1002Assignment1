@@ -52,6 +52,11 @@ public class Library {
         System.out.println(bookName + " is returned successfully . ");
     }
 
+    public void listBooks() {
+        for (Book bookObject : this.availableBooks) {
+            System.out.println(bookObject);
+        }
+    }
 
 }
 
