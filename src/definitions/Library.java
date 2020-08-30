@@ -16,5 +16,16 @@ public class Library {
             this.availableBooks[i] = new Book("physics", "HC Verma", "525862576451");
         }
 
+        public Book[] getAvailableBooks () {
+            return availableBooks.clone();
+        }
+        public void setAvailableBooks (Book[]availableBooks){
+            this.availableBooks = availableBooks;
+        }
+        @Override
+
     }
+
+    @Override
+}
 }
