@@ -1,10 +1,13 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
+ *  User: Manendra Singh
  *  Date: 21/08/20
  *  Time: 3:49 PM
  *  File Name : Student.java
  * */
 package definitions;
+
+import java.util.Arrays;
+import java.util.Objects;
 
 public class Student {
     private String firstName;
@@ -13,7 +16,6 @@ public class Student {
     private int universityRollNo;
     private int numberOfBooksIssued;
     private Book[] BooksIssued;
-}
 
     public Student(String firstName, String middleName, String lastName,
                    int universityRollNo, int numberOfBooksIssued) {
@@ -42,9 +44,8 @@ public class Student {
     }
 
     public long getUniversityRollNo() {
-        return getUniversityRollNo();
+        return universityRollNo;
     }
-
     public void setUniversityRollNo(int universityRollNo) {
         this.universityRollNo = universityRollNo;
     }
@@ -71,7 +72,34 @@ public class Student {
         this.numberOfBooksIssued = numberOfBooksIssued;
     }
 
+    @Override
+    public String toString() {
+        return Arrays.toString(BooksIssued);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return getUniversityRollNo() == student.getUniversityRollNo() &&
+                getBooksIssued() == student.getBooksIssued() &&
+                Objects.equals(getFirstName(), student.getFirstName()) &&
+                Objects.equals(getMiddleName(), student.getMiddleName()) &&
+                Objects.equals(getLastName(), student.getLastName()) &&
+                Arrays.equals(BooksIssued, student.BooksIssued);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getFirstName(), getMiddleName(), getLastName(), getUniversityRollNo(), numberOfBooksIssued);
+        result = 31 * result + Arrays.hashCode(BooksIssued);
+        return result;
+    }
+
+
 }
+
 
 
 
