@@ -41,6 +41,40 @@ public class FrontDesk {
         System.out.println("3. Show me all my issues books.");
         System.out.println("4. Exit.");
         System.out.println("Enter your choice from 1-4");
+        int yourChoice = scannerObject.nextInt();
+        String booksName;
+        int booksIssued;
+        if (yourChoice <= 4) {
+
+
+            switch (yourChoice) {
+                case ISSUE_A_BOOK:
+                    System.out.println("PLEASE ENTER THE BOOK WHICH YOU WANT TO ISSUE ");
+                    booksName = scannerObject.nextLine();
+                    scannerObject.nextLine();
+                    libraryObject.issuedBook(booksName);
+                    break;
+                case RETURN_PREVIOUSLY_ISSUED_BOOKS:
+                    System.out.println("PLEASE ENTER THE BOOK WHICH YOU WANT TO RETURN");
+                    scannerObject.nextLine();
+                    booksName = scannerObject.nextLine();
+                    libraryObject.returnedBook(booksName);
+                    break;
+                case SHOW_ALL_BOOKS_ISSUED:
+
+                    studentObject.getBooksIssued();
+                    break;
+                case EXIT:
+                    break;
+
+            }
+        } else {
+            System.out.println("INCORRECT CORRECT ");
+        }
+        scannerObject.close();
+
+
+    }
 
 
     }
