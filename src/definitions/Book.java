@@ -34,24 +34,24 @@ public class Book {
         return bookName;
     }
 
-    public String getAuthorName() {
-        return authorName;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public String getBookISBNNumber() {
-        return bookISBNNumber;
+    public String getAuthorName() {
+        return authorName;
     }
 
 /*
 Now creat setter method for variables
  */
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
-
     public void setAuthorName(String authorName) {
         this.authorName = authorName;
+    }
+
+    public String getBookISBNNumber() {
+        return bookISBNNumber;
     }
 
     public void setBookISBNNumber(String bookISBNNumber) {

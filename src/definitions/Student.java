@@ -35,37 +35,38 @@ public class Student {
         return firstName;
     }
 
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public long getUniversityRollNo() {
-        return universityRollNo;
-    }
-    public void setUniversityRollNo(int universityRollNo) {
-        this.universityRollNo = universityRollNo;
-    }
-
-    // creat setter method
-
-    public Book[] getBooksIssued() {
-        return BooksIssued.clone();
-    }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
     }
 
     public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    // creat setter method
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public long getUniversityRollNo() {
+        return universityRollNo;
+    }
+
+    public void setUniversityRollNo(int universityRollNo) {
+        this.universityRollNo = universityRollNo;
+    }
+
+    public Book[] getBooksIssued() {
+        return BooksIssued.clone();
     }
 
     public void setNumberOfBooksIssued(int numberOfBooksIssued) {
