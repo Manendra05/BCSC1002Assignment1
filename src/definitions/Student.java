@@ -49,6 +49,7 @@ public class Student {
 
     public String getLastName() {
         return lastName;
+
     }
 
     // creat setter method
@@ -59,23 +60,28 @@ public class Student {
 
     public long getUniversityRollNo() {
         return universityRollNo;
+
     }
 
     public void setUniversityRollNo(int universityRollNo) {
         this.universityRollNo = universityRollNo;
+
     }
 
     public Book[] getBooksIssued() {
         return BooksIssued.clone();
+
     }
 
     public void setNumberOfBooksIssued(int numberOfBooksIssued) {
         this.numberOfBooksIssued = numberOfBooksIssued;
+
     }
 
     @Override
     public String toString() {
         return Arrays.toString(BooksIssued);
+
     }
 
     @Override

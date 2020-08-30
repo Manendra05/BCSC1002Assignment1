@@ -18,6 +18,10 @@ public class Library {
         this.availableBooks[1] = new Book("physics", "HC Verma", "525862576451");
     }
 
+    public Library() {
+
+    }
+
     public Book[] getAvailableBooks() {
         return availableBooks.clone();
     }
@@ -38,6 +42,7 @@ public class Library {
         Library library = (Library) o;
         return Arrays.equals(getAvailableBooks(), library.getAvailableBooks());
     }
+
 
     @Override
     public int hashCode() {
